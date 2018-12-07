@@ -1,0 +1,76 @@
+{
+    "env": {
+        "es6": true,
+        "commonjs": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "15.0"
+        }
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "eqeqeq": ["error", "smart"],
+        "indent": ["error", 4, {"SwitchCase": 1}],
+        "key-spacing": ["error", {
+            "beforeColon": false,
+            "afterColon": true,
+            "mode": "strict"
+        }],
+        "linebreak-style": ["off", "windows"],
+        "no-console": "error",
+        "no-debugger": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "no-nested-ternary": "error",
+        "no-tabs": "error",
+        "no-trailing-spaces": "error",
+        "quotes": ["error", "single"],
+        "react/jsx-uses-react": "warn",
+        "react/prop-types": "off",
+        "react/no-did-mount-set-state": "off",
+        "react/display-name": "off",
+        "react/no-is-mounted": "off",
+        "semi": ["error", "always"],
+        "spaced-comment": "error",
+        "yoda": "error"
+    },
+    "globals": {
+        "__dirname": false,
+        "after": false,
+        "afterEach": false,
+        "alert": false,
+        "before": false,
+        "beforeEach": false,
+        "clearTimeout": false,
+        "describe": false,
+        "document": false,
+        "expect": false,
+        "global": false,
+        "it": false,
+        "Intl": false,
+        "jasmine": false,
+        "mx": false,
+        "process": false,
+        "React": false,
+        "setTimeout": false,
+        "spyOn": false,
+        "window": false,
+        "xdescribe": false,
+        "xit": false,
+        "XMLHttpRequest": false,
+    }
+}

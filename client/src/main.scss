@@ -1,0 +1,21 @@
+select, input, textarea, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.zero-opacity.fade-in {
+    animation: fade-in 350ms;
+    opacity: 1;
+}
+
+.zero-opacity.show {
+    opacity: 1;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

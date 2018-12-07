@@ -1,0 +1,61 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "arrow-parens": false,
+        "ban-types": [false],
+        "callable-types": false,
+        "eofline": false,
+        "interface-name": [true, "never-prefix"],
+        "member-access": [false],
+        "member-ordering": [
+          true,
+          {
+            "order": [
+              "public-static-field",
+              "public-instance-field",
+              "protected-static-field",
+              "protected-instance-field",
+              "private-static-field",
+              "private-instance-field",
+              "public-constructor",
+              "protected-constructor",
+              "private-constructor",
+              "public-static-method",
+              "public-instance-method",
+              "protected-static-method",
+              "protected-instance-method",
+              "private-static-method",
+              "private-instance-method"
+            ]
+          }
+        ],
+        "no-angle-bracket-type-assertion": false,
+        "no-consecutive-blank-lines": true,
+        "no-console": true,
+        "no-debugger": true,
+        "no-empty": false,
+        "no-any": true,
+        "no-eval": true,
+        "no-unused-variable": true,
+        "object-literal-sort-keys": false,
+        "only-arrow-functions": [true],
+        "ordered-imports": [false],
+        "quotemark": [true, "single", "jsx-double"],
+        "semicolon": [true, "always"],
+        "trailing-comma": [false],
+        "variable-name": [true, "ban-keywords", "allow-leading-underscore"],
+        "await-promise": true,
+        "no-string-throw": true,
+        "typedef": [ true,
+            "call-signature",
+            "parameter",
+            "property-declaration",
+            "member-variable-declaration"
+        ]
+       },
+    "rulesDirectory": []
+}

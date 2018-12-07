@@ -1,0 +1,37 @@
+**/bin/**
+**/obj/**
+**/{obj,bin,x64}/release/**
+**/{obj,bin,x64}/debug/**
+**/packages/**
+*.suo
+*.DotSettings.user
+*.csproj.user
+*.xproj.user
+project.lock.json
+**/.vs/**
+.vscode
+npm-debug.log
+StyleCop.Cache
+
+# ignore any node_modules files
+client/node_modules/**
+
+# ignore client build artifacts
+client/build/**
+client/dist/**
+
+client/build/**
+
+*secrets.tfvars
+client/stats.json
+
+terraform/s3/terraform\.exe
+nightwatch/node_modules/
+nightwatch/tests_output/
+nightwatch/selenium-debug.log
+nightwatch/yarn-error.log
+uitests/node_modules/
+uitests/tests_output/
+uitests/selenium-debug.log
+client/yarn-error.log
+client/coverage/

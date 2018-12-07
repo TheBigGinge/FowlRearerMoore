@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "outDir": "build",
+        "module": "es6",
+        "jsx": "preserve",
+        "allowSyntheticDefaultImports": true,
+        "allowJs": false,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "typeRoots": [
+            "src/types",
+            "src/resources",
+            "node_modules/@types"
+        ],
+        "sourceMap": true,
+        "baseUrl": "./src",
+        "paths": {
+            "images/*": ["images/*"],
+        }
+    },
+
+    "awesomeTypescriptLoaderOptions": {
+        "cacheDirectory": "build/.awcache",
+        "silent": true,
+        "useBabel": true,
+        "useCache": true
+    },
+
+    "exclude": ["node_modules"],
+    "include": ["./src/**/*"]
+}
