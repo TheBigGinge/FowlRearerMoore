@@ -7,7 +7,7 @@
         "allowSyntheticDefaultImports": true,
         "allowJs": false,
         "moduleResolution": "node",
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "typeRoots": [
             "src/types",
             "src/resources",

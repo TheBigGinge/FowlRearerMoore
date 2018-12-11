@@ -1,0 +1,16 @@
+@import '~variables.scss';
+
+.content-container {
+    margin: 0;
+    max-width: $content-container-max-width;
+    min-width: $content-container-min-width;
+    padding: 0 $spacing-large;
+
+    &.no-padding {
+        padding: 0;
+    }
+
+    @include min-width($content-container-max-width) {
+        margin: 0 auto;
+    } 
+}

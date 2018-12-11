@@ -43,11 +43,6 @@ const imagesRule = {
     test: /\.(png|jpe?g|gif)/,
     use: [{
         loader: 'file-loader',
-        options: {
-            useRelativePath: false,
-            outputPath: 'images/',
-            name: '[name].[ext]'
-        }
     }],
     exclude: [/node_modules/]
 };

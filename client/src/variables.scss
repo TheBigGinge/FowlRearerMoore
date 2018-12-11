@@ -1,0 +1,42 @@
+$logo-height-small: 28px;
+$logo-height-medium: 36px;
+$logo-height-large: 53px;
+$spacing-xsmall: 5px;
+$spacing-small: 10px;
+$spacing-medium: 15px;
+$spacing-large: 20px;
+$spacing-xlarge: 40px;
+$focus-value-color: #5cb85c;
+$focus-value-font-size: 36px;
+$header-height: 60px;
+$header-height-large: 113px; // logo height of 53px, padding of 30px
+$placeholder-bgcolor: rgba(0, 0, 0, 0.05);
+$placeholder-bgradius: 3px;
+$placeholder-color: rgba(0, 0, 0, 0);
+$content-container-min-width: 420px;
+$content-container-max-width: 650px;
+
+// Responsive variables and mixins
+$viewport-small: 650px;
+$viewport-medium: 830px;
+$viewport-large: 1000px;
+
+@mixin min-width($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin max-width($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin hoverable($backgroundColor) {
+    transition: background-color 200ms;
+
+    &:hover, &:active {
+        background-color: $backgroundColor;
+    }
+}

@@ -17,7 +17,7 @@ const port = 9091;
 // which references the generated bundles, among other things
 const htmlPlugin = new HtmlWebpackPlugin({
     // use a custom template to allow us to place the includes where we want
-    template: 'index-dev-template.html',
+    template: path.resolve(__dirname) + '/index-dev-template.html',
 
     filename: getConfigModel().htmlPluginFilename,
 

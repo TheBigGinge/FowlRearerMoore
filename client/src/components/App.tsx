@@ -1,4 +1,9 @@
 import React from 'react';
+import { Route, Switch, RouteComponentProps, withRouter } from 'react-router-dom';
+import Home from './home/Home';
+import Header from 'components/header/Header';
+import FeaturedPics from 'components/featuredPics/FeaturedPics';
+import Tips from 'components/tips/Tips';
 import { connect } from 'react-redux';
 
 // styles
@@ -19,17 +24,16 @@ export default class App extends React.Component<AppProps, {}> {
             <div key="app" className="app">
                 <div className="page-container" >
                     <div className="page">
-                        { this._renderPage() }
+                    <Header />
+                    <Switch>
+                        <Route exact={true} path="/" component={Home} />
+                        <Route path="/Picks" component={FeaturedPics} />
+                        <Route path="/Tips" component={Tips} />
+                    </Switch>
                     </div>
                 </div>
             </div>
         );
-    }
-
-    private _renderPage(): JSX.Element {
-        return <div>
-            HELLO MOFO!
-        </div>;
     }
 }
 

@@ -1,0 +1,169 @@
+@import '~variables.scss';
+
+.header-container {
+    background-color: #2d67b9;
+    height: $header-height;
+    position: relative;
+    z-index: 1;
+
+    .header {
+        align-items: center;
+        background-color: #1E1CB4;
+        color: #fff;
+        display: flex;
+        height: $header-height;
+        position: relative;
+        transition: box-shadow 150ms;
+
+        &.fixed {
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+
+        &.shadow {
+            box-shadow: 0 1px 6px #4d4d4c;
+        }
+
+        > * {
+            flex: 0 0 auto;
+        }
+
+        .header-title {
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    .logo {
+        display: none;
+        left: 50%;
+        padding: 3px; // gutter around image to enlarge hit target
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &.active {
+            display: inline-block;
+        }
+    }
+
+    .logo-img {
+        display: block;
+        height: $logo-height-small;
+    }
+
+    &.large {
+        height: $header-height-large;
+
+        .header {
+            height: $header-height-large;
+        }
+
+        .logo-img {
+            height: $logo-height-large;
+        }
+    }
+
+    @include min-width($viewport-small) {
+        &:not(.large) {
+            .header {
+                display: flex;
+                padding: 0 $spacing-medium;
+
+                // hide buttons and title
+                .empty-button,
+                .header-button,
+                .header-title {
+                    display: none;
+                }
+            }
+
+            .logo {
+                align-items: center;
+                display: flex; // to center logo image
+                flex: 0 0 auto;
+                height: 100%;
+                position: static;
+                transform: none;
+            }
+
+            .logo-img {
+                height: $logo-height-medium;
+            }
+        }
+
+        .nav-menu {
+            flex: 1;
+            height: 100%;
+
+            // add space between logo and navigation bar
+            margin-left: 3*$spacing-large;
+            opacity: 1;             // override fade component
+            position: static;       // override fixed positioning
+            visibility: visible;    // override fade component
+
+            .content-container {
+                margin: 0;
+                max-width: none;
+                min-width: 0;
+                padding: 0;
+            }
+
+            .button-container,
+            .heading,
+            .nav-item-icon {
+                display: none;
+            }
+
+            .nav-list {
+                display: flex;
+                height: 100%;
+            }
+
+            .nav-list-container {
+                height: 100%;
+            }
+
+            .nav-list-item {
+                flex: 0 0 auto;
+                font-size: 14px;
+                margin-right: $spacing-xsmall;
+                text-align: center;
+
+                &:last-child {
+                    height: 100%;
+                    position: absolute;
+                    right: $spacing-small;
+                }
+            }
+
+            .nav-list-item-content {
+                align-items: flex-end;
+                border-bottom: 3px solid transparent;
+                height: 100%;
+                margin: 0;
+                padding: $spacing-xsmall $spacing-xsmall $spacing-small $spacing-xsmall;
+
+                &:last-child { // sadly needed for specificity
+                    border-bottom: 3px solid transparent;
+                }
+            }
+
+            .nav-list-item.active .nav-list-item-content {
+                border-color: #4FDAFF;
+            }
+
+            .nav-list-link {
+                display: block;
+                height: 100%;
+                padding: 0 $spacing-xsmall;
+            }
+        }
+
+        &.large .nav-menu {
+            display: none;
+        }
+    }
+}

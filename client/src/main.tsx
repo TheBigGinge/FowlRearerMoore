@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider, Store } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers, Middleware } from 'redux';
+import createBrowserHistory from 'history/createBrowserHistory';
+import { Router } from 'react-router-dom';
 import thunk from 'redux-thunk';
 
 import App from 'components/App';
@@ -23,11 +25,15 @@ const createReduxStore = (): void => {
 const initApp = (): void => {
     createReduxStore();
 
+    const history = createBrowserHistory();
+
     // Attach app to DOM
     const appRoot = document.getElementById('appRoot');
     render(
         <Provider store={store}>
-            <App />
+            <Router history={history}>
+                <App />
+            </Router>
         </Provider>,
         appRoot
     );

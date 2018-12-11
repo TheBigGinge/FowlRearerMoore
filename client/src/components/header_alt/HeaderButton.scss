@@ -1,0 +1,13 @@
+@import '~variables.scss';
+
+.header-button {
+    @include hoverable(rgba(#2d67b9, 0.8));
+
+    align-items: center;
+    color: #22d6dd;
+    display: flex;
+    font-size: 25px;
+    height: $header-height;
+    justify-content: center;
+    width: $header-height;
+}
