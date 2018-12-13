@@ -6,7 +6,9 @@
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "date-fns": "1.29.0",
+    "express": "^4.13.1",
     "intl": "1.2.5",
+    "pg": "6.2.3",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-redux": "5.0.6",
@@ -73,7 +75,7 @@
     "webpack-dev-server": "2.9.7"
   },
   "scripts": {
-    "start": "npm run dev",
+    "start": "node server.js",
     "test": "node node_modules/webpack/bin/webpack.js --config webpack.test.config.js && node run-tests.js",
     "tc-test": "node node_modules/webpack/bin/webpack.js --config webpack.test.config.js && node run-tests.js --tc",
     "test-only": "node run-tests.js",

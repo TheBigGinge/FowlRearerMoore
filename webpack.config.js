@@ -11,7 +11,6 @@ const {
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
-const ExternalDependenciesPlugin = require('@payscale/external-dependencies-plugin');
 const Uglify = require('uglifyjs-webpack-plugin');
 
 // plugin to extract CSS out of JS into own file
@@ -41,7 +40,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
     hash: true,
 
     // use a custom template to allow us to place the includes where we want
-    template: 'index-template.html',
+    template: path.resolve(__dirname) + '/index-template.html',
 
     filename: getConfigModel().htmlPluginFilename,
 
@@ -165,11 +164,6 @@ module.exports = [
                     'NODE_ENV': JSON.stringify('production')
                 }
             }),
-            new ExternalDependenciesPlugin({
-                chunks: ['main'],
-                outputFilename: getConfigModel().dependencyPluginFilename,
-                outputPath: path.resolve(__dirname)
-            })
         ],
         stats,
         externals,
