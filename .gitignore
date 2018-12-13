@@ -14,16 +14,16 @@ npm-debug.log
 StyleCop.Cache
 
 # ignore any node_modules files
-client/node_modules/**
+node_modules/**
 
 # ignore client build artifacts
-client/build/**
-client/dist/**
+build/**
+dist/**
 
-client/build/**
+build/**
 
 *secrets.tfvars
-client/stats.json
+stats.json
 
 terraform/s3/terraform\.exe
 nightwatch/node_modules/
@@ -33,5 +33,5 @@ nightwatch/yarn-error.log
 uitests/node_modules/
 uitests/tests_output/
 uitests/selenium-debug.log
-client/yarn-error.log
-client/coverage/
+yarn-error.log
+coverage/
